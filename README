@@ -1,0 +1,19 @@
+Dreadnought
+
+A battleship-like game supporting online play.
+
+This project is being developed as part of Dr. Zhong's Data Communication and Networking class at Troy University however anyone is welcome to contribute.
+
+The project will be written using Java.
+
+There will be two basic parts:
+
+1) The server. 
+
+2) The client. 
+
+The clients will communicate with the server using sockets.
+
+Two clients which want to play will contact a running dreadnought-server and pair up to play against each other.
+
+We would also like for the clients to be able to chat with each other.
