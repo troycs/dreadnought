@@ -18,6 +18,13 @@ Two clients which want to play will contact a running dreadnought-server and pai
 
 We would also like for the clients to be able to chat with each other.
 
+Development Strategy:
+
+First we build a prototype which is played locally and has a
+text based cli interface.
+Then we add support for online play and add a gui interface.
+
+Each player gets one of each of the following types of ships:
 
 Type of ship        Length
 aircraft carrier    5
@@ -25,5 +32,29 @@ battleship          4
 destroyer           3
 submarine           3
 patrol boat         2
+
+There is one grid for each player.
+The size of the grid is traditionally 10x10.
+Traditionally the rows are given the numbers 1-10
+and the columns are given the letters A-L
+Shots are described as [row][column]
+eg: fire A10
+
+The ships cannot overlap, ie each sqare is occupied by at most one ship.
+
+Phases of Gameplay:
+
+Deployment
+The players choose where to place there ships.
+The players can also change the orientation of their ships from horizontal
+to vertical. Ships are horizontal by default.
+
+Rounds
+The players take turns firing shots into each others grid.
+A shot is either a hit or a miss.
+If the shot is a hit, the player may continue firing.
+The players turn ends when the player misses.
+
+
 
 
