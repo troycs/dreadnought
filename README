@@ -19,3 +19,11 @@ Two clients which want to play will contact a running dreadnought-server and pai
 We would also like for the clients to be able to chat with each other.
 
 
+Type of ship        Length
+aircraft carrier    5
+battleship          4
+destroyer           3
+submarine           3
+patrol boat         2
+
+
