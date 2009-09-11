@@ -8,5 +8,6 @@ public class Game
     public Game()
     {
         grid = new Grid();
+        grid.display();
     }
 }

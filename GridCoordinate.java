@@ -9,8 +9,8 @@ public class GridCoordinate
     private int col;
 
     //this array is used to convert to and from alphanumeric
-    //representation of coordinates eg: A4, B6, L1 etc...
-    private char[] chars = {'A','B','C','D','E','F','G','H','I','J','L'};
+    //representation of coordinates eg: A4, B6, J1 etc...
+    private char[] chars = {'A','B','C','D','E','F','G','H','I','J'};
 
     public GridCoordinate()
     {
@@ -47,7 +47,7 @@ public class GridCoordinate
     //returns a string representation of this coordinate
     //eg: if col=0 and row=0 the string "A1" is returned
     //eg: if col=2 and row=3 the string "C4" is returned
-    //eg: if col=9 and row=9 the string "L10" is returned
+    //eg: if col=9 and row=9 the string "J10" is returned
     public String toString()
     {
         return Character.toString(this.chars[this.row]) + (this.col+1);

@@ -28,7 +28,42 @@ public class Grid
 
         //test toString method of GridCoordinate
         GridCoordinate g = new GridCoordinate(0,0);
-        System.out.println(g);
+        //System.out.println(g);
     }
 
+    //this method will display the grid on screen
+    public void display()
+    {
+        //display the columns headings, A-L
+        char[] chars = {'A','B','C','D','E','F','G','H','I','J'};
+        System.out.print("    ");
+        for (char i : chars)
+            System.out.print(Character.toString(i) + "  ");
+        System.out.println();
+        //display each row
+        for (int i=0; i<10; i++)
+        {
+            //display the upper dashed line
+            System.out.print("   +");
+            for (int j=0; j<10; j++)
+                System.out.print("--+");
+            System.out.println();
+            //display the middle of the row
+            System.out.print(i+1);
+            //add extra space if row label is single digit 
+            if (i+1<10)
+                System.out.print(" ");
+            System.out.print(" ¦");
+            for (int j=0; j<10; j++)
+            {
+                System.out.print("  ¦");
+            }
+            System.out.println();
+        }
+        //display the upper dashed line
+        System.out.print("   +");
+        for (int j=0; j<10; j++)
+            System.out.print("--+");
+        System.out.println();
+    }
 }
