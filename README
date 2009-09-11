@@ -6,15 +6,27 @@ This project is being developed as part of Dr. Zhong's Data Communication and Ne
 
 The project will be written using Java.
 
-There will be two basic parts:
+Connecting two players over the network:
 
-1) The server. 
+In order for two opponents to play against each other, one must be designated as the game host.
 
-2) The client. 
+In the online game setup menu there will be two options:
 
-The clients will communicate with the server using sockets.
+[1] Host a game
+If a player chooses this option, dreadnought will wait for a remote player to connect to it
+before the game begins.
 
-Two clients which want to play will contact a running dreadnought-server and pair up to play against each other.
+[2] Join a game
+If the player chooses this option, they will be prompted for the ip address of the host.
+
+Later will be develop a game server which will list the hosts which are waiting for someone to join.
+The game server will provide the following services:
+
+- Allow a client to announce that they would like to host a game.
+- Allow a client to retrieve a list of hosts who are waiting for someone to join.
+
+Once a host and client are paired up, they will communicate directly with each other.
+The game server will only be used to establish the connection between them.
 
 We would also like for the clients to be able to chat with each other.
 
