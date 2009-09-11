@@ -34,7 +34,7 @@ public class Grid
     //this method will display the grid on screen
     public void display()
     {
-        //display the columns headings, A-L
+        //display the columns headings, A-J
         char[] chars = {'A','B','C','D','E','F','G','H','I','J'};
         System.out.print("    ");
         for (char i : chars)
