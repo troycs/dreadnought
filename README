@@ -54,7 +54,3 @@ The players take turns firing shots into each others grid.
 A shot is either a hit or a miss.
 If the shot is a hit, the player may continue firing.
 The players turn ends when the player misses.
-
-
-
-

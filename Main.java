@@ -6,8 +6,6 @@ public class Main
 {
     public static void main(String[] argv)
     {
-        System.out.println("dreadnought");
-        Ship battleship = new Ship(5);
-        System.out.println(battleship.getOrientation());
+        Game g = new Game();
     }
 }

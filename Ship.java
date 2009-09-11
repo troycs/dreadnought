@@ -52,8 +52,6 @@ public class Ship
     //damages the block with the given block number
     public void inflictDamage(int blockId)
     {
-        if (blockId >= this.length)
-            throw new Exception();
         this.damage[blockId] = true;
     }
 }
