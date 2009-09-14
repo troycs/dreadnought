@@ -7,7 +7,7 @@ public class Game
 
     public Game()
     {
-        grid = new Grid();
-        grid.display();
+        System.out.println("starting new single player game...");
+        SinglePlayerGame g = new SinglePlayerGame();
     }
 }

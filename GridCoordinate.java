@@ -1,3 +1,4 @@
+import java.util.ArrayList
 /*
 * Represents a coordinate on the Grid
 * Coordinates are represented interally as integers in the 
@@ -22,6 +23,22 @@ public class GridCoordinate
     {
         this.row = row;
         this.col = col;
+    }
+
+    //this constructor creates a new GridCoordinate from 
+    //an alphanumeric coordinate string eg: A4, B6, J1
+    public GridCoordinate(String alphaNumericCoordinate)
+    {
+        //slice alphaNumericCoordinate into it's
+        //alphabetic and numeric components
+        String letter = alphaNumericCoordinate.substring(0,1);
+        String number = alphaNumericCoordinate.substring(1);
+        //convert chars to an ArrayList so we can use indexOf
+        //to find the subscript of letter
+        ArrayList<char> charsList = new ArrayList<char>(this.chars);
+        this.col = charsList.indexOf(letter);
+        //parse the numeric component of the alphanumeric coordinate
+        this.row = Integer.parseInt(number);
     }
 
     public void setRow(int row)

@@ -32,6 +32,7 @@ public class Grid
     }
 
     //this method will display the grid on screen
+    //it will not be needed for the gui version of the game
     public void display()
     {
         //display the columns headings, A-J
@@ -63,5 +64,12 @@ public class Grid
         for (int j=0; j<10; j++)
             System.out.print("--+");
         System.out.println();
+    }
+
+    //this method will interactively ask the user where to deploy all the ships
+    //it will tell them the length of the ship and then read in the coordinates
+    public void deployShipsInteractively()
+    {
+        
     }
 }
