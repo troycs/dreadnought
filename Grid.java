@@ -7,10 +7,15 @@
 * Initially the grid will contain no Ship objects
 * The user will then place 1 of each of the 5 types of Ships
 */
+import java.util.Scanner;
 
 public class Grid
 {
-    Ship[] ships;
+    //the five ships of this grid
+    private Ship[] ships;
+
+    //for reading console input
+    private Scanner scan;
 
     public Grid()
     {
@@ -29,6 +34,8 @@ public class Grid
         //test toString method of GridCoordinate
         GridCoordinate g = new GridCoordinate(0,0);
         //System.out.println(g);
+
+        scan = new Scanner(System.in);
     }
 
     //this method will display the grid on screen
@@ -66,10 +73,24 @@ public class Grid
         System.out.println();
     }
 
-    //this method will interactively ask the user where to deploy all the ships
-    //it will tell them the length of the ship and then read in the coordinates
-    public void deployShipsInteractively()
+    //this will be used for the cli version only
+    public void startInteractiveDeployment()
     {
-        
+        //display instructions
+        String msg = "Interactive Deployment\n"
+        + "commands:\n"
+        + "\"move [id] [coords]\" moves ship with given id to given coordinates\n"
+        + "\"rotate [id]\" toggles horizontal/vertical orientation for ship with given id\n"
+        + "examples:\n"
+        + "\"move 1 C5\" where 1 is the ship id and C5 is the desired position\n"
+        + "\"rotate 1\" where 1 is the ship id\n";
+        System.out.println(msg);
+
+        while (true)
+        {
+            System.out.print(">>> ");
+            String input = scan.nextLine();
+            
+        }
     }
 }

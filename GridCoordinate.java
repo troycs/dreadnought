@@ -1,4 +1,4 @@
-import java.util.ArrayList
+import java.util.ArrayList;
 /*
 * Represents a coordinate on the Grid
 * Coordinates are represented interally as integers in the 
@@ -11,7 +11,7 @@ public class GridCoordinate
 
     //this array is used to convert to and from alphanumeric
     //representation of coordinates eg: A4, B6, J1 etc...
-    private char[] chars = {'A','B','C','D','E','F','G','H','I','J'};
+    private final char[] chars = {'A','B','C','D','E','F','G','H','I','J'};
 
     public GridCoordinate()
     {
@@ -31,12 +31,18 @@ public class GridCoordinate
     {
         //slice alphaNumericCoordinate into it's
         //alphabetic and numeric components
-        String letter = alphaNumericCoordinate.substring(0,1);
+        char letter = alphaNumericCoordinate.substring(0,1).charAt(0);
         String number = alphaNumericCoordinate.substring(1);
-        //convert chars to an ArrayList so we can use indexOf
-        //to find the subscript of letter
-        ArrayList<char> charsList = new ArrayList<char>(this.chars);
-        this.col = charsList.indexOf(letter);
+        //find the given letter in the chars list
+        this.row = -1;
+        for (int i=0; i<this.chars.length; i++)
+        {
+            if (this.chars[i] == letter)
+                this.row = i;   
+        }
+        if (this.row == -1)
+            System.out.println("error: invalid coordinate"); //replace this with an exception later
+        
         //parse the numeric component of the alphanumeric coordinate
         this.row = Integer.parseInt(number);
     }

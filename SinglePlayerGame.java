@@ -12,6 +12,9 @@ public class SinglePlayerGame
     
     public SinglePlayerGame()
     {
+        playerGrid = new Grid();
+        computerGrid = new Grid();
         
+        playerGrid.startInteractiveDeployment();
     }
 }

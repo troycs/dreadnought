@@ -18,6 +18,9 @@ public class Ship
     //the orientation of the ship
     private Orientation orientation;
 
+    //the anchor coordinate of the ship
+    private GridCoordinate anchor;    
+
     //ship constructor
     public Ship(int length)
     {
@@ -27,7 +30,9 @@ public class Ship
         //set all blocks to undamaged (false)
         for (int i=0; i<length; i++)
             this.damage[i] = false;
+        //set default orientation
         this.orientation = Orientation.HORIZONTAL;
+        
     }
 
     //gets the length of this ship in grid units
